@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { Eye, EyeOff } from 'lucide-react';
-import login from '../assets/images/login.png';
+import login from '@/assets/images/login.png';
 
 export const LoginPage = () => {
   const navigate = useNavigate();
