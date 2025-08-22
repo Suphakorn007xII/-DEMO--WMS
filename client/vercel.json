@@ -1,0 +1,7 @@
+{
+  "redirects": [{ "source": "/", "destination": "/wms", "permanent": false }],
+  "rewrites": [
+    { "source": "/wms", "destination": "/" },
+    { "source": "/wms/(.*)", "destination": "/" }
+  ]
+}
