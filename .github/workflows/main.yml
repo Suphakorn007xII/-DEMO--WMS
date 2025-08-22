@@ -1,4 +1,5 @@
-name: CI/CD (Vercel + Vite)
+# .github/workflows/build.yml
+name: Build (Vite)
 
 on:
   push:
@@ -11,13 +12,13 @@ on:
     paths:
       - 'client/**'
 
-# ยกเลิกรันก่อนหน้าบน branch เดียวกัน เพื่อลดคิว
 concurrency:
-  group: vercel-${{ github.ref }}
+  group: build-${{ github.ref }}
   cancel-in-progress: true
 
 env:
-  WORKDIR: client
+  WORKDIR: client # ถ้าโปรเจกต์อยู่ราก ให้เปลี่ยนเป็น "."
+
   NODE_VERSION: 20
 
 jobs:
@@ -26,6 +27,7 @@ jobs:
     defaults:
       run:
         working-directory: ${{ env.WORKDIR }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -39,62 +41,18 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Lint & Typecheck (optional)
-        run: |
-          npm run -s lint || true
-          npm run -s typecheck || true
+      - name: Lint (optional)
+        run: npm run -s lint || true
+
+      - name: Typecheck (optional)
+        run: npm run -s typecheck || true
 
       - name: Build
         run: npm run build
 
-      - name: Upload dist artifact
+      - name: Upload dist artifact (optional)
         uses: actions/upload-artifact@v4
         with:
           name: dist
           path: ${{ env.WORKDIR }}/dist
-
-  deploy-preview:
-    if: github.event_name == 'pull_request'
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist
-
-      - name: Deploy preview to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: .
-          vercel-args: '--prebuilt' # ใช้ผล build จาก artifact
-        id: deploy
-
-      - name: Comment preview URL on PR
-        if: steps.deploy.outputs.preview-url != ''
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          message: |
-            ✅ Preview: ${{ steps.deploy.outputs.preview-url }}
-
-  deploy-production:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist
-
-      - name: Deploy production to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: .
-          vercel-args: '--prebuilt --prod'
+          retention-days: 7
