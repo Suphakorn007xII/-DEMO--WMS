@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "day": "Monday",
+      "orders": 32,
+      "amount": 15800
+    },
+    {
+      "day": "Tuesday",
+      "orders": 28,
+      "amount": 14200
+    },
+    {
+      "day": "Wednesday",
+      "orders": 35,
+      "amount": 17500
+    },
+    {
+      "day": "Thursday",
+      "orders": 40,
+      "amount": 21000
+    },
+    {
+      "day": "Friday",
+      "orders": 55,
+      "amount": 29000
+    },
+    {
+      "day": "Saturday",
+      "orders": 62,
+      "amount": 33500
+    },
+    {
+      "day": "Sunday",
+      "orders": 48,
+      "amount": 25000
+    }
+  ]
+}

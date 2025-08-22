@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "rank": 1,
+      "customer_name": "สมชาย การค้า",
+      "orders": 120,
+      "amount": 580000
+    },
+    {
+      "rank": 1,
+      "customer_name": "บริษัท Honda Parts",
+      "orders": 95,
+      "amount": 420000
+    },
+    {
+      "rank": 2,
+      "customer_name": "รุ่งเจริญอะไหล่",
+      "orders": 88,
+      "amount": 395000
+    },
+    {
+      "rank": 1,
+      "customer_name": "Nissan Service Center",
+      "orders": 75,
+      "amount": 310000
+    },
+    {
+      "rank": 1,
+      "customer_name": "อารีย์การช่าง",
+      "orders": 68,
+      "amount": 280000
+    },
+    {
+      "rank": 3,
+      "customer_name": "Ford Club Thailand",
+      "orders": 60,
+      "amount": 250000
+    },
+    {
+      "rank": 1,
+      "customer_name": "บริษัท Mazda Auto",
+      "orders": 55,
+      "amount": 230000
+    },
+    {
+      "rank": 2,
+      "customer_name": "ช่างวิชัย อะไหล่ยนต์",
+      "orders": 48,
+      "amount": 200000
+    },
+    {
+      "rank": 1,
+      "customer_name": "Isuzu Dealer Bangkok",
+      "orders": 42,
+      "amount": 175000
+    },
+    {
+      "rank": 3,
+      "customer_name": "Suzuki อะไหล่แท้",
+      "orders": 35,
+      "amount": 150000
+    }
+  ]
+}

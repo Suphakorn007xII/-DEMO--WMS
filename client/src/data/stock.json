@@ -1,0 +1,274 @@
+{
+  "data": [
+    {
+      "product_id": 1,
+      "maker": "Toyota",
+      "type": "ท่อไอเสีย",
+      "sku": "toyota-20250801-1",
+      "price1": 1200,
+      "price2": 1800,
+      "stock": 14
+    },
+    {
+      "product_id": 2,
+      "maker": "Honda",
+      "type": "ผ้าเบรก",
+      "sku": "honda-20250801-2",
+      "price1": 800,
+      "price2": 1200,
+      "stock": 22
+    },
+    {
+      "product_id": 3,
+      "maker": "Mazda",
+      "type": "กรองอากาศ",
+      "sku": "mazda-20250801-3",
+      "price1": 450,
+      "price2": 700,
+      "stock": 35
+    },
+    {
+      "product_id": 4,
+      "maker": "Nissan",
+      "type": "โช๊คอัพ",
+      "sku": "nissan-20250801-4",
+      "price1": 2000,
+      "price2": 2600,
+      "stock": 12
+    },
+    {
+      "product_id": 5,
+      "maker": "Ford",
+      "type": "ไฟหน้า",
+      "sku": "ford-20250801-5",
+      "price1": 1500,
+      "price2": 2100,
+      "stock": 9
+    },
+    {
+      "product_id": 6,
+      "maker": "Isuzu",
+      "type": "คลัตช์",
+      "sku": "isuzu-20250801-6",
+      "price1": 1800,
+      "price2": 2500,
+      "stock": 18
+    },
+    {
+      "product_id": 7,
+      "maker": "Suzuki",
+      "type": "ยางอะไหล่",
+      "sku": "suzuki-20250801-7",
+      "price1": 2200,
+      "price2": 3000,
+      "stock": 7
+    },
+    {
+      "product_id": 8,
+      "maker": "Toyota",
+      "type": "แบตเตอรี่",
+      "sku": "toyota-20250801-8",
+      "price1": 2800,
+      "price2": 3500,
+      "stock": 11
+    },
+    {
+      "product_id": 9,
+      "maker": "Honda",
+      "type": "สายพาน",
+      "sku": "honda-20250801-9",
+      "price1": 650,
+      "price2": 950,
+      "stock": 28
+    },
+    {
+      "product_id": 10,
+      "maker": "Mazda",
+      "type": "หัวเทียน",
+      "sku": "mazda-20250801-10",
+      "price1": 300,
+      "price2": 500,
+      "stock": 40
+    },
+    {
+      "product_id": 11,
+      "maker": "Nissan",
+      "type": "กระจกข้าง",
+      "sku": "nissan-20250801-11",
+      "price1": 1100,
+      "price2": 1600,
+      "stock": 15
+    },
+    {
+      "product_id": 12,
+      "maker": "Ford",
+      "type": "กันชนหน้า",
+      "sku": "ford-20250801-12",
+      "price1": 3500,
+      "price2": 4200,
+      "stock": 6
+    },
+    {
+      "product_id": 13,
+      "maker": "Isuzu",
+      "type": "ไส้กรองน้ำมันเครื่อง",
+      "sku": "isuzu-20250801-13",
+      "price1": 400,
+      "price2": 650,
+      "stock": 30
+    },
+    {
+      "product_id": 14,
+      "maker": "Suzuki",
+      "type": "พวงมาลัย",
+      "sku": "suzuki-20250801-14",
+      "price1": 2500,
+      "price2": 3200,
+      "stock": 8
+    },
+    {
+      "product_id": 15,
+      "maker": "Toyota",
+      "type": "เกียร์",
+      "sku": "toyota-20250801-15",
+      "price1": 5000,
+      "price2": 6200,
+      "stock": 5
+    },
+    {
+      "product_id": 16,
+      "maker": "Honda",
+      "type": "โซ่ขับ",
+      "sku": "honda-20250801-16",
+      "price1": 900,
+      "price2": 1300,
+      "stock": 25
+    },
+    {
+      "product_id": 17,
+      "maker": "Mazda",
+      "type": "หม้อน้ำ",
+      "sku": "mazda-20250801-17",
+      "price1": 2700,
+      "price2": 3400,
+      "stock": 10
+    },
+    {
+      "product_id": 18,
+      "maker": "Nissan",
+      "type": "กรองน้ำมันเชื้อเพลิง",
+      "sku": "nissan-20250801-18",
+      "price1": 550,
+      "price2": 850,
+      "stock": 32
+    },
+    {
+      "product_id": 19,
+      "maker": "Ford",
+      "type": "หัวฉีดน้ำมัน",
+      "sku": "ford-20250801-19",
+      "price1": 1900,
+      "price2": 2500,
+      "stock": 14
+    },
+    {
+      "product_id": 20,
+      "maker": "Isuzu",
+      "type": "โช๊คหลัง",
+      "sku": "isuzu-20250801-20",
+      "price1": 2100,
+      "price2": 2800,
+      "stock": 12
+    },
+    {
+      "product_id": 21,
+      "maker": "Suzuki",
+      "type": "ไฟท้าย",
+      "sku": "suzuki-20250801-21",
+      "price1": 1300,
+      "price2": 1800,
+      "stock": 17
+    },
+    {
+      "product_id": 22,
+      "maker": "Toyota",
+      "type": "กุญแจรีโมท",
+      "sku": "toyota-20250801-22",
+      "price1": 1500,
+      "price2": 2000,
+      "stock": 20
+    },
+    {
+      "product_id": 23,
+      "maker": "Honda",
+      "type": "สายไฟ",
+      "sku": "honda-20250801-23",
+      "price1": 600,
+      "price2": 900,
+      "stock": 27
+    },
+    {
+      "product_id": 24,
+      "maker": "Mazda",
+      "type": "กันสาด",
+      "sku": "mazda-20250801-24",
+      "price1": 800,
+      "price2": 1200,
+      "stock": 22
+    },
+    {
+      "product_id": 25,
+      "maker": "Nissan",
+      "type": "เบาะนั่ง",
+      "sku": "nissan-20250801-25",
+      "price1": 4000,
+      "price2": 5200,
+      "stock": 7
+    },
+    {
+      "product_id": 26,
+      "maker": "Ford",
+      "type": "เพลาขับ",
+      "sku": "ford-20250801-26",
+      "price1": 3200,
+      "price2": 4000,
+      "stock": 9
+    },
+    {
+      "product_id": 27,
+      "maker": "Isuzu",
+      "type": "หม้อลมเบรก",
+      "sku": "isuzu-20250801-27",
+      "price1": 2600,
+      "price2": 3400,
+      "stock": 13
+    },
+    {
+      "product_id": 28,
+      "maker": "Suzuki",
+      "type": "แผงคอนโซล",
+      "sku": "suzuki-20250801-28",
+      "price1": 2800,
+      "price2": 3600,
+      "stock": 8
+    },
+    {
+      "product_id": 29,
+      "maker": "Toyota",
+      "type": "ประตู",
+      "sku": "toyota-20250801-29",
+      "price1": 7500,
+      "price2": 9200,
+      "stock": 4
+    },
+    {
+      "product_id": 30,
+      "maker": "Honda",
+      "type": "ปีกนก",
+      "sku": "honda-20250801-30",
+      "price1": 2400,
+      "price2": 3200,
+      "stock": 11
+    }
+  ]
+}
