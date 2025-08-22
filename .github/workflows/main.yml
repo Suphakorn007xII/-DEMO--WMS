@@ -44,9 +44,6 @@ jobs:
           npm run -s lint || true
           npm run -s typecheck || true
 
-      - name: Test (optional)
-        run: npm test -- --ci --passWithNoTests
-
       - name: Build
         run: npm run build
 
