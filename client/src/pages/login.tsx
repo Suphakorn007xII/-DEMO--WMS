@@ -5,23 +5,23 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
+import { Eye, EyeOff } from 'lucide-react';
+import login from '../assets/images/login.png';
 
 export const LoginPage = () => {
   const navigate = useNavigate();
   const { setToastAlert } = useToast();
 
-  // ---- Config: ตั้งชื่อโปรเจ็กต์เพื่อใช้ทำ namespace key ----
   const PROJECT_ID = import.meta.env.VITE_APP_ID ?? 'wms';
   const lsKey = (k: string) => `${PROJECT_ID}:${k}`;
 
-  // ---- Mockup credential สำหรับทดสอบ ----
   const mockupKey = { username: 'admin123', password: 'admin123' };
 
-  // ---- Local state ----
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // ✅ state สำหรับ toggle
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,17 +42,15 @@ export const LoginPage = () => {
         return;
       }
 
-      // payload ที่จะเก็บหลังล็อกอิน (ปรับตามจริงได้)
       const authData = {
         user: { username },
-        token: 'mock-token', // ในระบบจริงให้ใช้ token จาก backend
+        token: 'mock-token',
         signedAt: Date.now(),
       };
 
-      // Remember me -> localStorage, ไม่ติ๊ก -> sessionStorage
       const storage = remember ? window.localStorage : window.sessionStorage;
       storage.setItem(lsKey('auth'), JSON.stringify(authData));
-
+      window.dispatchEvent(new Event('auth-change'));
       setToastAlert({
         type: 'success',
         message: 'Signed in',
@@ -66,11 +64,9 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="flex w-full h-full justify-center items-center px-4 ">
-      {' '}
+    <div className="flex w-full h-full justify-center items-center px-4">
       <div className="flex w-full max-w-7xl overflow-hidden">
-        {' '}
-        {/* Left: Form */}{' '}
+        {/* Left: Form */}
         <div className="w-full sm:w-1/2 p-8 space-y-6 border-[1px] sm:border-[0px] rounded-2xl sm:rounded-none">
           <h2 className="text-2xl font-bold text-gray-800">เข้าสู่ระบบ</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
@@ -88,18 +84,27 @@ export const LoginPage = () => {
               />
             </div>
 
-            {/* Password */}
+            {/* Password + Toggle */}
             <div className="space-y-1">
               <Label htmlFor="password">Password</Label>
-              <Input
-                id="password"
-                type="password"
-                placeholder="กรอกรหัสผ่าน"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                autoComplete="current-password"
-                required
-              />
+              <div className="relative">
+                <Input
+                  id="password"
+                  type={showPassword ? 'text' : 'password'}
+                  placeholder="กรอกรหัสผ่าน"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  autoComplete="current-password"
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                >
+                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
             </div>
 
             {/* Remember + Forgot */}
@@ -135,13 +140,10 @@ export const LoginPage = () => {
             </Button>
           </form>
         </div>
+
         {/* Right: Image */}
-        <div className="hidden sm:flex w-1/2 items-center justify-center ">
-          <img
-            src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-0af4-61f5-89d2-191ebd0d3be6/raw?se=2025-08-16T14%3A38%3A57Z&sp=r&sv=2024-08-04&sr=b&scid=9a1778e5-75ac-56c9-83bb-1dff12252288&skoid=04233560-0ad7-493e-8bf0-1347c317d021&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-16T00%3A39%3A03Z&ske=2025-08-17T00%3A39%3A03Z&sks=b&skv=2024-08-04&sig=ELt%2BalSqWkiQQaMNUgz2F3sBApMf8N6HukQgyzyxOX4%3D"
-            alt="image"
-            className="object-cover max-h-[100%]"
-          />
+        <div className="hidden sm:flex w-1/2 items-center justify-center">
+          <img src={login} alt="image" className="object-cover max-h-[100%]" />
         </div>
       </div>
     </div>
