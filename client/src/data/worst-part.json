@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "rank": 1,
+      "maker": "Suzuki",
+      "type": "กันชนหลัง",
+      "orders": 5,
+      "amount": 25000
+    },
+    {
+      "rank": 2,
+      "maker": "Ford",
+      "type": "ไฟตัดหมอก",
+      "orders": 7,
+      "amount": 30000
+    },
+    {
+      "rank": 3,
+      "maker": "Mazda",
+      "type": "ประตูหลัง",
+      "orders": 9,
+      "amount": 45000
+    },
+    {
+      "rank": 4,
+      "maker": "Isuzu",
+      "type": "มือจับประตู",
+      "orders": 10,
+      "amount": 20000
+    },
+    {
+      "rank": 5,
+      "maker": "Nissan",
+      "type": "กระจกหลัง",
+      "orders": 12,
+      "amount": 36000
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "rank": 1,
+      "maker": "Toyota",
+      "type": "ผ้าเบรก",
+      "orders": 320,
+      "amount": 960000
+    },
+    {
+      "rank": 2,
+      "maker": "Honda",
+      "type": "กรองอากาศ",
+      "orders": 280,
+      "amount": 560000
+    },
+    {
+      "rank": 3,
+      "maker": "Nissan",
+      "type": "โช๊คอัพ",
+      "orders": 210,
+      "amount": 735000
+    },
+    {
+      "rank": 4,
+      "maker": "Isuzu",
+      "type": "คลัตช์",
+      "orders": 185,
+      "amount": 555000
+    },
+    {
+      "rank": 5,
+      "maker": "Mazda",
+      "type": "แบตเตอรี่",
+      "orders": 160,
+      "amount": 720000
+    }
+  ]
+}
