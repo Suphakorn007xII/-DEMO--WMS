@@ -48,7 +48,7 @@ export const GoodCustomer = () => {
 
   return (
     <div className="border-[2px] flex flex-col w-full h-full items-start rounded-xl shadow border-blue-200">
-      <Label className="p-2 text-sm font-bold">
+      <Label className="p-2 text-lg font-bold">
         👑 ลูกค้าดีเด่นประจำสัปดาห์ 10 อันดับแรก
       </Label>
 
@@ -62,7 +62,7 @@ export const GoodCustomer = () => {
             <div className="flex gap-3 min-w-0">
               <div className="w-6 text-right font-semibold">{i + 1}</div>
               <div className="min-w-0">
-                <div className="font-medium text-sm truncate">
+                <div className="font-medium text-lg truncate">
                   {item.customer_name} {medal(i + 1)}
                 </div>
                 <span
@@ -77,10 +77,10 @@ export const GoodCustomer = () => {
 
             {/* ขวา: ตัวเลขยอดขาย */}
             <div className="text-right">
-              <div className="text-sm font-semibold">
+              <div className="text-lg font-semibold">
                 {item.orders.toLocaleString()} รายการ
               </div>
-              <div className="text-xs text-muted-foreground">
+              <div className="text-md text-muted-foreground">
                 {currencyTHB(item.amount)}
               </div>
             </div>

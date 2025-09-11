@@ -5,10 +5,10 @@ export const MainMenu = () => {
   const navigate = useNavigate();
   const location = useLocation(); // ✅ ใช้ location
   const menu = [
-    { name: 'Dashboard', navigate: '' },
-    { name: 'Manage Stock', navigate: 'manage-stock' },
-    { name: 'Manage customer', navigate: 'manage-customer' },
-    { name: 'Manage employee', navigate: 'manage-employee' },
+    { name: 'หน้าแรก', navigate: '' },
+    { name: 'จัดการคลังสินค้า', navigate: 'manage-stock' },
+    { name: 'จัดการข้อมูลลูกค้า', navigate: 'manage-customer' },
+    { name: 'จัดการข้อมูลพนักงาน', navigate: 'manage-employee' },
   ];
 
   return (
@@ -22,7 +22,7 @@ export const MainMenu = () => {
         return (
           <Label
             key={i}
-            className={`cursor-pointer hover:text-blue-600 ${
+            className={`cursor-pointer text-xl hover:text-blue-600 ${
               isActive ? 'text-blue-600 font-bold' : ''
             }`}
             onClick={() => navigate(path)}

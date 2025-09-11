@@ -6,7 +6,7 @@ export const Layout = () => {
     <div className="flex flex-col w-full h-[100vh] ">
       <NavBar />
       <main className="flex w-full h-full ">
-        <div className="w-full max-w-6xl mx-auto ">
+        <div className="w-full 3xl:max-w-[2000px] 2xl:max-w-[1800px] xl:max-w-[1200px] mx-auto ">
           <Outlet />
         </div>
       </main>

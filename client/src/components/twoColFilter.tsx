@@ -40,7 +40,7 @@ export const TwoColFilter = ({
         className="flex items-center justify-between w-full"
         onClick={() => setOpen((v) => !v)}
       >
-        <Label className="text-xs text-muted-foreground">{title}</Label>
+        <Label className="text-lg text-muted-foreground">{title}</Label>
         <ChevronDown
           size={16}
           className={`transition-transform ${open ? 'rotate-180' : ''}`}
@@ -60,7 +60,7 @@ export const TwoColFilter = ({
                   checked={selected.has(opt)}
                   onCheckedChange={() => toggle(opt)}
                 />
-                <span className="text-xs">{opt}</span>
+                <span className="text-lg">{opt}</span>
               </label>
             ))}
           </div>

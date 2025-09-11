@@ -22,7 +22,7 @@ export const GoodPart = () => {
 
   return (
     <div className="border-[2px] flex flex-col w-full h-full items-start rounded-xl p-2 shadow  border-green-200">
-      <Label className="p-1 text-sm font-bold">
+      <Label className="p-1 text-lg font-bold">
         📈 สินค้าที่ขายดีประจำสัปดาห์
       </Label>
 
@@ -32,19 +32,21 @@ export const GoodPart = () => {
           className="flex w-full justify-between pb-0.5 hover:bg-blue-50"
         >
           <div className="flex gap-2">
-            <div className="text-lg font-semibold w-6 text-right">{i + 1}</div>
+            <div className="text-xl font-semibold w-6 text-right">{i + 1}</div>
             <div className="flex flex-col">
-              <div className="text-md font-medium">
+              <div className="text-lg font-medium">
                 {item.type} {medal(i + 1)}
               </div>
-              <div className="text-xs">{item.maker}</div>
+              <div className="text-md">{item.maker}</div>
             </div>
           </div>
           <div className="flex flex-col items-end">
-            <div className="text-sm font-medium">
+            <div className="text-lg font-medium">
               {item.orders.toLocaleString()} ชิ้น
             </div>
-            <div className="text-xs">{item.amount.toLocaleString()} บาท</div>
+            <div className="text-md text-muted-foreground">
+              {item.amount.toLocaleString()} บาท
+            </div>
           </div>
         </div>
       ))}

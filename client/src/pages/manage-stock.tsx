@@ -102,12 +102,12 @@ export const ManageStockPage = () => {
   );
 
   return (
-    <div className="flex w-full flex-col py-3 gap-3  overflow-auto">
+    <div className="flex w-full flex-col py-3 gap-3  overflow-auto text-lg">
       {/* Header */}
       <div className="flex items-center w-full justify-between">
-        <Label className="text-xl font-bold text-black/90">Manage Stock</Label>
-        <Button size="sm" className="cursor-pointer active:scale-95 text-xs">
-          <PlusSquare className="mr-2 h-4 w-4" /> Create new
+        <Label className="text-2xl font-bold text-black/90">Manage Stock</Label>
+        <Button size="lg" className="cursor-pointer active:scale-95 text-lg">
+          <PlusSquare className="mr-2 h-5 w-5" /> เพิ่มสินค้า
         </Button>
       </div>
 
@@ -115,11 +115,11 @@ export const ManageStockPage = () => {
       <div className="flex w-full gap-3">
         <div className="flex flex-col w-3/12 border rounded-md p-3 gap-4 bg-white">
           <div className="flex items-center gap-2 text-sm font-medium">
-            <Filter className="h-4 w-4" /> Filters
+            <Filter className="h-4 w-4" /> กรอง
           </div>
 
           <TwoColFilter
-            title="Maker"
+            title="ยี่ห้อ"
             options={makers}
             value={selectedMakers}
             onChange={(v) => {
@@ -129,7 +129,7 @@ export const ManageStockPage = () => {
           />
 
           <TwoColFilter
-            title="Type"
+            title="หมวดหมู่"
             options={types}
             value={selectedTypes}
             onChange={(v) => {
@@ -155,9 +155,10 @@ export const ManageStockPage = () => {
 
         {/* Search + Table */}
         <div className="flex flex-col w-full gap-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 ">
             <Input
-              placeholder="ค้นหาสินค้า (id/maker/type/sku)"
+              className=""
+              placeholder="ค้นหาสินค้า"
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);

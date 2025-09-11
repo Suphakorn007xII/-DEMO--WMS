@@ -86,7 +86,7 @@ export const LoginPage = () => {
 
             {/* Password + Toggle */}
             <div className="space-y-1">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">รหัสผ่าน</Label>
               <div className="relative">
                 <Input
                   id="password"

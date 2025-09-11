@@ -75,7 +75,7 @@ export const WeeklySale: FC<WeeklySalesChartProps> = ({
 
   return (
     <div className="border-2 rounded-lg p-2 shadow">
-      <Label className="p-1 text-sm font-bold">
+      <Label className="p-1 text-lg font-bold">
         📊ยอดขายประจำสัปดาห์ (1 สิงหาคม - 7 สิงหาคม 2025)
       </Label>
       <ChartContainer

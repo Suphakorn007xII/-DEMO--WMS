@@ -38,32 +38,34 @@ export const TableStock: FC<Props> = ({
 
   return (
     <div>
-      <ScrollArea className="w-full">
-        <Table>
+      <ScrollArea className="w-full ">
+        <Table className="text-lg ">
           <TableHeader>
-            <TableRow>
+            <TableRow className=" ">
               <TableHead className="w-[90px]">
                 {headerCell('product_id', 'ID')}
               </TableHead>
               <TableHead className="min-w-[120px]">
-                {headerCell('maker', 'Maker')}
+                {headerCell('maker', 'ยี่ห้อ')}
               </TableHead>
               <TableHead className="min-w-[160px]">
-                {headerCell('type', 'Type')}
+                {headerCell('type', 'หมวดหมู่')}
               </TableHead>
               <TableHead className="min-w-[220px]">
-                {headerCell('sku', 'SKU')}
+                {headerCell('sku', 'รหัสสินค้า')}
+              </TableHead>
+              <TableHead className="text-center">
+                {headerCell('price1', 'ราคา 1')}
               </TableHead>
               <TableHead className="text-right">
-                {headerCell('price1', 'Price 1')}
+                {headerCell('price2', 'ราคา 2')}
               </TableHead>
               <TableHead className="text-right">
-                {headerCell('price2', 'Price 2')}
+                {headerCell('stock', 'คงเหลือ')}
               </TableHead>
-              <TableHead className="text-right">
-                {headerCell('stock', 'Stock')}
+              <TableHead className="text-right font-bold">
+                แก้ไข/ดู/ลบ
               </TableHead>
-              <TableHead className="text-right">Action</TableHead>
             </TableRow>
           </TableHeader>
 
@@ -73,18 +75,18 @@ export const TableStock: FC<Props> = ({
                 <TableCell className="font-medium">{r.product_id}</TableCell>
                 <TableCell>{r.maker}</TableCell>
                 <TableCell>{r.type}</TableCell>
-                <TableCell className="font-mono text-xs">{r.sku}</TableCell>
-                <TableCell className="text-right">
+                <TableCell className="font-mono text-lg">{r.sku}</TableCell>
+                <TableCell className="text-left">
                   {r.price1.toLocaleString()}
                 </TableCell>
-                <TableCell className="text-right">
+                <TableCell className="text-left">
                   {r.price2.toLocaleString()}
                 </TableCell>
-                <TableCell className="text-right">
+                <TableCell className="text-left">
                   {r.stock.toLocaleString()}
                 </TableCell>
-                <TableCell className="text-right">
-                  <div className="flex gap-2.5">
+                <TableCell className="text-left">
+                  <div className="flex gap-2.5 items-center justify-end">
                     <PenLine className="size-3.5 text-blue-600 hover:text-blue-500 cursor-pointer active:scale-95" />
                     <Eye className="size-3.5 text-yellow-500 hover:text-yellow-500 cursor-pointer active:scale-95" />
                     <Trash2 className="size-3.5 text-red-600 hover:text-red-500 cursor-pointer active:scale-95" />
